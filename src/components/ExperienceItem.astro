@@ -8,6 +8,8 @@ export interface Props {
     resTwo: string;
     resThree: string;
     imgLink: string;
+    jobTitle?: string;
+    description: string[];
   };
 }
 
@@ -20,7 +22,7 @@ const { exp } = Astro.props;
       <div class="col-sm-12">
         <a href="#">
           <img
-            class="img-responsive img-hover company-image center-block"
+            class="img-responsive img-hover company-image center-block company-logo"
             src={exp.imgLink}
             alt=""
           />
@@ -29,15 +31,30 @@ const { exp } = Astro.props;
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <h3>
+        <h3 class="company-time-frame">
           <a href="#">{exp.businessName} ({exp.startDate} - {exp.endDate})</a>
         </h3>
+        <h4 class="text-center job-title">{exp.jobTitle}</h4>
         <ul>
-          <li>{exp.resOne}</li>
-          <li>{exp.resTwo}</li>
-          <li>{exp.resThree}</li>
+          {exp.description.map((bulletPoint) => <li>{bulletPoint}</li>)}
         </ul>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  .job-title {
+    margin-top: 0.35rem;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+  }
+
+  .company-time-frame {
+    margin-bottom: 0;
+  }
+
+  .company-logo {
+    height: 100px !important;
+  }
+</style>
