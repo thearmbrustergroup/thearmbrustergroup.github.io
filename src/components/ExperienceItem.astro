@@ -1,0 +1,29 @@
+---
+import experienceData from '../data/experienceData'
+---
+
+<div class="img-experience">
+  <div class="exp-img-wrapper center-block row">
+    <div class="col-sm-12">
+      <a href="#">
+        <img
+          class="img-responsive img-hover company-image center-block"
+          ng-src="{{imgLink}}"
+          alt=""
+        />
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>
+        <a href="#">{{ businessName }} ({{ startDate }} - {{ endDate }})</a>
+      </h3>
+      <ul>
+        <li>{{ resOne }}</li>
+        <li>{{ resTwo }}</li>
+        <li>{{ resThree }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

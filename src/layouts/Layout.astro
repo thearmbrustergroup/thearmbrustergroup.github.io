@@ -1,0 +1,280 @@
+---
+export interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet" />
+
+    <!-- Custom Fonts -->
+    <link
+      href="font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  /* Global Styles */
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+  }
+
+  .main-content {
+    padding-top: 15px;
+  }
+
+  .navbar {
+    background-color: white;
+    -webkit-box-shadow: 4px 3px 5px 0px rgba(158, 158, 158, 1);
+    -moz-box-shadow: 4px 3px 5px 0px rgba(158, 158, 158, 1);
+    box-shadow: 4px 0 5px 0px rgba(158, 158, 158, 1) !important;
+  }
+
+  .navbar-toggle .icon-bar {
+    background-color: black;
+  }
+
+  .section-border {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .exp-img-wrapper {
+    /*height: 200px;*/
+    width: 300px;
+  }
+
+  .exp-section-title {
+    margin-bottom: 36px;
+  }
+
+  .company-image {
+    max-height: 50px;
+  }
+
+  /* About Section */
+
+  #about-section {
+    padding-bottom: 15px;
+  }
+
+  .about-body {
+    margin-top: 15px;
+    padding: 0 30px;
+  }
+
+  /* Portfolio Section */
+
+  .portfolio-section {
+    background-color: #eee;
+    padding: 0 40px 25px 40px;
+  }
+
+  .portfolio-item-wrapper {
+    margin-top: 15px;
+  }
+
+  .portfolio-item-title {
+    font-size: 28px;
+  }
+
+  .portfolio-item-inner {
+    position: relative;
+  }
+
+  .portfolio-item-inner .contentHover:hover {
+    opacity: 1;
+  }
+
+  .contentHover {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    font-size: 13px;
+    padding: 20px;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  .img-portfolio {
+    margin-bottom: 30px;
+  }
+
+  #experience-section {
+    padding: 0px 40px 30px 40px;
+  }
+
+  .experience-item-wrapper {
+    height: 315px;
+  }
+
+  .img-experience img {
+    max-height: 200px;
+    max-width: 300px;
+    margin: 20 auto;
+  }
+
+  .experience-margin {
+    margin-top: 50px;
+  }
+
+  .img-hover:hover {
+    opacity: 0.8;
+  }
+
+  /* Contact Section */
+  #contact-section {
+    background-color: #eee;
+    padding: 20px;
+  }
+
+  /* 404 Page Styles */
+
+  .error-404 {
+    font-size: 100px;
+  }
+
+  /* Footer Styles */
+
+  footer {
+    margin: 50px 0;
+  }
+
+  /* Auxillary Styles */
+
+  /* Responsive Styles */
+
+  @media (min-width: 1450px) {
+    .portfolio-item-title {
+      font-size: 28px !important;
+    }
+
+    .contentHover {
+      font-size: 13px !important;
+    }
+
+    .experience-item-wrapper {
+      height: 250px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .portfolio-item-title {
+      font-size: 20px;
+    }
+
+    .contentHover {
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .portfolio-item-title {
+      font-size: 20px;
+    }
+
+    .contentHover {
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .portfolio-item-title {
+      font-size: 19px;
+    }
+
+    .contentHover {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 880px) {
+    .experience-item-wrapper {
+      height: 395px;
+    }
+
+    .exp-img-wrapper {
+      height: 100px;
+    }
+
+    .portfolio-item-title {
+      font-size: 14px;
+    }
+
+    .contentHover {
+      font-size: 9px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .customer-img,
+    .img-related {
+      margin-bottom: 30px;
+    }
+    .company-image {
+      max-height: 120px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .img-portfolio {
+      margin-bottom: 15px;
+    }
+
+    .experience-item-wrapper {
+      height: 285px;
+    }
+
+    .portfolio-item-title {
+      font-size: 19px;
+    }
+
+    .contentHover {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 507px) {
+    .exp-img-wrapper {
+      height: 80px;
+    }
+
+    .experience-item-wrapper {
+      height: 350px;
+    }
+
+    .company-image {
+      max-height: 100px;
+    }
+  }
+</style>
