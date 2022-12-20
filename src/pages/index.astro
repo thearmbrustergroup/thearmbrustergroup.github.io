@@ -9,18 +9,18 @@ import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 import "../styles/bootstrap.css";
 import "../styles/global.css";
+import Container from "../components/Container.astro";
 ---
 
 <Layout title="John Armbruster's Portfolio">
   <Nav />
 
-  <div id="main" class="container-fluid main-content" du-scroll-container>
+  <Container>
     <AboutSection />
     <PortfolioSection />
     <ExperienceSection />
     <ContactSection />
-  </div>
-
+  </Container>
   <Footer />
 </Layout>
 
