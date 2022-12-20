@@ -5,10 +5,5 @@ import ExperienceItem from "./ExperienceItem.astro";
 
 <div id="experience-section" class="row">
   <h1 class="text-center exp-section-title">Experience</h1>
-  <div
-    class="col-sm-6 experience-item-wrapper"
-    ng-repeat="item in experienceItems"
-  >
-    {experienceData.map((exp) => <ExperienceItem exp={exp} />)}
-  </div>
+  {experienceData.map((exp) => <ExperienceItem exp={exp} />)}
 </div>

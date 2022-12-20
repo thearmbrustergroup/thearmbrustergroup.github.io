@@ -14,28 +14,30 @@ export interface Props {
 const { exp } = Astro.props;
 ---
 
-<div class="img-experience">
-  <div class="exp-img-wrapper center-block row">
-    <div class="col-sm-12">
-      <a href="#">
-        <img
-          class="img-responsive img-hover company-image center-block"
-          src={exp.imgLink}
-          alt=""
-        />
-      </a>
+<div class="col-sm-6 experience-item-wrapper">
+  <div class="img-experience">
+    <div class="exp-img-wrapper center-block row">
+      <div class="col-sm-12">
+        <a href="#">
+          <img
+            class="img-responsive img-hover company-image center-block"
+            src={exp.imgLink}
+            alt=""
+          />
+        </a>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <h3>
-        <a href="#">{exp.businessName} ({exp.startDate} - {exp.endDate})</a>
-      </h3>
-      <ul>
-        <li>{exp.resOne}</li>
-        <li>{exp.resTwo}</li>
-        <li>{exp.resThree}</li>
-      </ul>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>
+          <a href="#">{exp.businessName} ({exp.startDate} - {exp.endDate})</a>
+        </h3>
+        <ul>
+          <li>{exp.resOne}</li>
+          <li>{exp.resTwo}</li>
+          <li>{exp.resThree}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
