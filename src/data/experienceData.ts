@@ -78,7 +78,8 @@ export default [
   },
   {
     businessName: "DevMountain",
-    imgLink: "images/devmtnlogo1.png",
+    imgLink:
+      "https://media.licdn.com/dms/image/C4E0BAQHyankT20mTdA/company-logo_100_100/0/1625177688445?e=1679529600&v=beta&t=5VjZ_V45C8Zeebc7fZxo60i8mQHbz9SxrcwURrodzrA",
     startDate: "Jan 2016",
     endDate: "May 2016",
     resOne: "Fix bugs in the in-house apps when requested.",
