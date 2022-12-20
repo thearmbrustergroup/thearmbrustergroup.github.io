@@ -2,7 +2,7 @@ export default [
   {
     title: 'Blogpress-SailsJS',
     previewLink: 'https://blogpress-sails-mysql.herokuapp.com/',
-    imgLink: 'assets/blogpress-sails1.png',
+    imgLink: '/images/blogpress-sails1.png',
     builtWithFront: 'Bootstrap',
     builtWithBack: 'SailsJS, EJS, PassportJS',
     description:
@@ -11,7 +11,7 @@ export default [
   {
     title: 'EZ-Compiler',
     previewLink: 'https://www.npmjs.com/package/ez-compiler',
-    imgLink: 'assets/npm-img1.png',
+    imgLink: '/images/npm-img1.png',
     builtWithFront: 'N/A',
     builtWithBack: 'NodeJS',
     description:
@@ -20,7 +20,7 @@ export default [
   {
     title: 'Task Terminator',
     previewLink: 'https://task-terminator.herokuapp.com/',
-    imgLink: 'assets/taskterminator1.png',
+    imgLink: '/images/taskterminator1.png',
     builtWithFront: 'Angular, Bootstrap, Highcharts',
     builtWithBack:
       'Node, Express, MongoDB, Mongoose, Chron, Moment, Gulp, Stylus, Babel, Jade, Wit.Ai, Slack',
@@ -30,7 +30,7 @@ export default [
   {
     title: 'Real Estate Tracker',
     previewLink: 'http://realestatetracker.herokuapp.com/#/home',
-    imgLink: 'assets/RETracker1.png',
+    imgLink: '/images/RETracker1.png',
     builtWithFront: 'Angular, Bootstrap, Angular Material, Highcharts',
     builtWithBack: 'Node, Express, MongoDB, Mongoose',
     description:
@@ -39,7 +39,7 @@ export default [
   {
     title: 'WalkthroughJS',
     previewLink: 'http://johnazre.github.io/walkthroughjs/',
-    imgLink: 'assets/WalkthroughJS1.png',
+    imgLink: '/images/WalkthroughJS1.png',
     builtWithFront: 'Angular, Bootstrap',
     builtWithBack: 'Firebase (BaaS)',
     description:
@@ -48,7 +48,7 @@ export default [
   {
     title: 'Five-Day Forecast',
     previewLink: 'http://john-weather-react.herokuapp.com',
-    imgLink: 'assets/forecast1.png',
+    imgLink: '/images/forecast1.png',
     builtWithFront: 'React, Redux, Google Maps, SparkLines',
     builtWithBack: 'Node, Express',
     description:

@@ -1,15 +1,11 @@
+---
+import portfolioData from "../data/portfolioData";
+import PortfolioItem from "./PortfolioItem.astro";
+---
+
 <div id="portfolio-section" class="row portfolio-section">
   <h1 class="text-center">Portfolio</h1>
-  <div
-    class="col-lg-4 col-md-6 col-sm-6 col-xs-12 portfolio-item-wrapper"
-    ng-repeat="item in portfolioItems"
-  >
-    <portfolio-item
-      title="item.title"
-      preview-link="item.previewLink"
-      img-link="item.imgLink"
-      built-with-front="item.builtWithFront"
-      built-with-back="item.builtWithBack"
-      description="item.description"></portfolio-item>
+  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 portfolio-item-wrapper">
+    {portfolioData.map((project) => <PortfolioItem project={project} />)}
   </div>
 </div>

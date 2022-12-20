@@ -1,5 +1,17 @@
 ---
-import experienceData from '../data/experienceData'
+export interface Props {
+  exp: {
+    businessName: string;
+    startDate: string;
+    endDate: string;
+    resOne: string;
+    resTwo: string;
+    resThree: string;
+    imgLink: string;
+  };
+}
+
+const { exp } = Astro.props;
 ---
 
 <div class="img-experience">
@@ -8,7 +20,7 @@ import experienceData from '../data/experienceData'
       <a href="#">
         <img
           class="img-responsive img-hover company-image center-block"
-          ng-src="{{imgLink}}"
+          src={exp.imgLink}
           alt=""
         />
       </a>
@@ -17,12 +29,12 @@ import experienceData from '../data/experienceData'
   <div class="row">
     <div class="col-sm-12">
       <h3>
-        <a href="#">{{ businessName }} ({{ startDate }} - {{ endDate }})</a>
+        <a href="#">{exp.businessName} ({exp.startDate} - {exp.endDate})</a>
       </h3>
       <ul>
-        <li>{{ resOne }}</li>
-        <li>{{ resTwo }}</li>
-        <li>{{ resThree }}</li>
+        <li>{exp.resOne}</li>
+        <li>{exp.resTwo}</li>
+        <li>{exp.resThree}</li>
       </ul>
     </div>
   </div>

@@ -1,22 +1,14 @@
+---
+import experienceData from "../data/experienceData";
+import ExperienceItem from "./ExperienceItem.astro";
+---
+
 <div id="experience-section" class="row">
   <h1 class="text-center exp-section-title">Experience</h1>
   <div
     class="col-sm-6 experience-item-wrapper"
     ng-repeat="item in experienceItems"
   >
-    <!-- <experience-item
-        business-name="item.businessName"
-        ,
-        img-link="item.imgLink"
-        ,
-        start-date="item.startDate"
-        ,
-        end-date="item.endDate"
-        ,
-        res-one="item.resOne"
-        ,
-        res-two="item.resTwo"
-        ,
-        res-three="item.resThree"></experience-item> -->
+    {experienceData.map((exp) => <ExperienceItem exp={exp} />)}
   </div>
 </div>

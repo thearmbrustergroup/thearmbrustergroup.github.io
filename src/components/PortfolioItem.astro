@@ -1,21 +1,37 @@
-<!-- Project One -->
+---
+export interface Props {
+  project: {
+    title: string;
+    previewLink: string;
+    imgLink: string;
+    builtWithFront: string;
+    builtWithBack: string;
+    description: string;
+  };
+}
+const { project } = Astro.props as Props;
+---
+
 <div class="row">
   <div class="col-md-12">
     <div class="portfolio-item-inner">
       <a href="{{previewLink}}">
-        <img class="img-responsive img-hover" ng-src="{{imgLink}}" alt="" />
+        <img
+          class="img-responsive img-hover"
+          src={`${project.imgLink}`}
+          alt=""
+        />
         <div class="contentHover">
-          <p class="portfolio-item-title">{{ title }}</p>
+          <p class="portfolio-item-title">{project.title}</p>
           <ul>
-            <li>Front: {{ builtWithFront }}</li>
-            <li>Back: {{ builtWithBack }}</li>
+            <li>Front: {project.builtWithFront}</li>
+            <li>Back: {project.builtWithBack}</li>
           </ul>
           <div class="text-center">
-            <p>{{ description }}</p>
+            <p>{project.description}</p>
           </div>
         </div>
       </a>
     </div>
   </div>
-  <!-- /.row -->
 </div>
